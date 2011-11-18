@@ -12,8 +12,6 @@
     (not
      (some #(divs? n %) (range 2 (+ 2 (int (Math/sqrt n))))))))
 
-(map isprime? [2 3 5])
-
 (defn isprimefactor? [x n]
   (and (zero? (rem n x)) (isprime? x)))
 

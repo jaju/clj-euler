@@ -6,7 +6,5 @@
 
 (reduce max
         (map #(reduce * %)
-             (map
-              #(map int %)
-              (for [c (range (count mylnseq))]
-                (into [] (take 5 (drop c mylnseq))))))) ;; 40824
+             (for [c (range (count mylnseq))]
+               (into [] (take 5 (drop c mylnseq)))))) ;; 40824
